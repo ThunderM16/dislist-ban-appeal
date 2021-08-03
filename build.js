@@ -21,7 +21,7 @@ async function main() {
                 process.exit(1);
             }
 
-            data = data.replace("action=\"/success\" netlify", "action=\"/.netlify/functions/submit-appeal\"");
+            data = data.replace("action=\"/success\" netlify", "action=\"/.netlify/func/submit-appeal\"");
             fs.writeFile(form, data, "UTF-8", err => {
                 if (err) {
                     console.log(err);
